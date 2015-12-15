@@ -14,7 +14,7 @@
         private string puzzleInput;
 
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             this.sut = new Day3();
             
@@ -22,32 +22,32 @@
         }
 
         [Test]
-        public void Part1_Examples()
+        public void Part1Examples()
         {
-            Assert.AreEqual(2, sut.findDupes(">"));
-            Assert.AreEqual(4, sut.findDupes("^>v<"));
-            Assert.AreEqual(2, sut.findDupes("^v^v^v^v^v"));
+            Assert.AreEqual(2, sut.FindDupes(">"));
+            Assert.AreEqual(4, sut.FindDupes("^>v<"));
+            Assert.AreEqual(2, sut.FindDupes("^v^v^v^v^v"));
         }
 
         [Test]
-        public void Part1_Result()
+        public void Part1Result()
         {
-            var result = sut.findDupes(this.puzzleInput);
+            var result = sut.FindDupes(this.puzzleInput);
             Trace.WriteLine("Result is " + result);
         }
 
         [Test]
-        public void Part2_Examples()
+        public void Part2Examples()
         {
-            Assert.AreEqual(3, sut.robotHelper("^v"));
-            Assert.AreEqual(3, sut.robotHelper("^>v<"));
-            Assert.AreEqual(11, sut.robotHelper("^v^v^v^v^v"));
+            Assert.AreEqual(3, sut.RobotHelper("^v"));
+            Assert.AreEqual(3, sut.RobotHelper("^>v<"));
+            Assert.AreEqual(11, sut.RobotHelper("^v^v^v^v^v"));
         }
 
         [Test]
-        public void Part2_Result()
+        public void Part2Result()
         {
-            var result = sut.robotHelper(this.puzzleInput);
+            var result = sut.RobotHelper(this.puzzleInput);
             Trace.WriteLine("Result is " + result);
         }
     }

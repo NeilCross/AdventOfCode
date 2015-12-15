@@ -12,7 +12,7 @@
         private string puzzleInput;
 
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             this.sut = new Day1();
             this.puzzleInput =
@@ -20,32 +20,32 @@
         }
 
         [Test]
-        public void Part1_Examples()
+        public void Part1Examples()
         {
-            Assert.AreEqual(sut.follow("(())"), 0);
-            Assert.AreEqual(sut.follow("()()"), 0);
+            Assert.AreEqual(sut.Follow("(())"), 0);
+            Assert.AreEqual(sut.Follow("()()"), 0);
 
-            Assert.AreEqual(sut.follow("((("), 3);
-            Assert.AreEqual(sut.follow("(()(()("), 3);
-            Assert.AreEqual(sut.follow("))((((("), 3);
+            Assert.AreEqual(sut.Follow("((("), 3);
+            Assert.AreEqual(sut.Follow("(()(()("), 3);
+            Assert.AreEqual(sut.Follow("))((((("), 3);
 
 
-            Assert.AreEqual(sut.follow("())"), -1);
-            Assert.AreEqual(sut.follow("))("), -1);
+            Assert.AreEqual(sut.Follow("())"), -1);
+            Assert.AreEqual(sut.Follow("))("), -1);
 
-            Assert.AreEqual(sut.follow(")))"), -3);
-            Assert.AreEqual(sut.follow(")())())"), -3);
+            Assert.AreEqual(sut.Follow(")))"), -3);
+            Assert.AreEqual(sut.Follow(")())())"), -3);
         }
 
         [Test]
         public void Part1()
         {
-            var result = sut.follow(this.puzzleInput);
+            var result = sut.Follow(this.puzzleInput);
             Trace.WriteLine("Result is " + result);
         }
 
         [Test]
-        public void Part2_Examples()
+        public void Part2Examples()
         {
             Assert.AreEqual(sut.followTo(")", -1), 1);
             Assert.AreEqual(sut.followTo("()())", -1), 5);

@@ -12,7 +12,7 @@ namespace AdventOfCode
         //    robotHelper(input).Dump();
         //}
 
-        public int findDupes(string input)
+        public int FindDupes(string input)
         {
             int x = 0, y = 0;
             var allocated = new Dictionary<string, int>();
@@ -51,7 +51,7 @@ namespace AdventOfCode
             return allocated.Count(a => a.Value > 0);
         }
 
-        public int robotHelper(string input)
+        public int RobotHelper(string input)
         {
             int rx = 0, ry = 0;
             int sx = 0, sy = 0;

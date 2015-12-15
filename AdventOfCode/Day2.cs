@@ -5,7 +5,7 @@ namespace AdventOfCode
 {
     public class Day2
     {
-        public int wrap(IEnumerable<IEnumerable<int>> input)
+        public int Wrap(IEnumerable<IEnumerable<int>> input)
         {
             int total = 0;
             foreach (var item in input)
@@ -14,7 +14,7 @@ namespace AdventOfCode
                 2 * item.ElementAt(1) * item.ElementAt(2) +
                 2 * item.ElementAt(0) * item.ElementAt(2);
 
-                var smallest = getSmallest(item);
+                var smallest = this.GetSmallest(item);
 
                 size += smallest[0] * smallest[1];
 
@@ -23,7 +23,7 @@ namespace AdventOfCode
             return total;
         }
 
-        public int[] getSmallest(IEnumerable<int> item)
+        public int[] GetSmallest(IEnumerable<int> item)
         {
 
             int x, y;
@@ -43,14 +43,14 @@ namespace AdventOfCode
             return new[] { x, y };
         }
 
-        public int ribbon(IEnumerable<IEnumerable<int>> input)
+        public int Ribbon(IEnumerable<IEnumerable<int>> input)
         {
             int total = 0;
             foreach (var item in input)
             {
                 var length = item.ElementAt(0) * item.ElementAt(1) * item.ElementAt(2);
 
-                var smallest = getSmallest(item);
+                var smallest = this.GetSmallest(item);
 
                 length += (smallest[0] + smallest[1]) * 2;
                 total += length;

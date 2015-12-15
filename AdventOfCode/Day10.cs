@@ -9,7 +9,7 @@ namespace AdventOfCode
         //    iterate(new[] { 1, 3, 2, 1, 1, 3, 1, 1, 1, 2 }, 50).Length.Dump();
         //}
 
-        public int[] iterate(int[] data, int count)
+        public int[] Iterate(int[] data, int count)
         {
             if (count == 0) return data;
 
@@ -27,7 +27,7 @@ namespace AdventOfCode
 
 
             }
-            return iterate(result.ToArray(), --count);
+            return this.Iterate(result.ToArray(), --count);
         }
 
 

@@ -12,7 +12,7 @@
         /// </param>
         /// <returns>
         /// </returns>
-        public int follow(string instructions) 
+        public int Follow(string instructions) 
         {
             var steps = instructions.ToCharArray();
             return steps.Count(s => s.Equals('(')) - steps.Count(s => s.Equals(')'));

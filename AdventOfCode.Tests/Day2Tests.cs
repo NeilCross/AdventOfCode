@@ -14,7 +14,7 @@
         private IEnumerable<IEnumerable<int>> puzzleInput;
 
         [SetUp]
-        public void setup()
+        public void Setup()
         {
             this.sut = new Day2();
 
@@ -1026,30 +1026,30 @@
         }
 
         [Test]
-        public void Part1_Examples()
+        public void Part1Examples()
         {
-            Assert.AreEqual(58, sut.wrap(new[] { new[] { 2, 3, 4 } }));
-            Assert.AreEqual(43, sut.wrap(new[] { new[] { 1, 1, 10 } }));
+            Assert.AreEqual(58, sut.Wrap(new[] { new[] { 2, 3, 4 } }));
+            Assert.AreEqual(43, sut.Wrap(new[] { new[] { 1, 1, 10 } }));
         }
 
         [Test]
-        public void Part1_Result()
+        public void Part1Result()
         {
-            var result = sut.wrap(this.puzzleInput);
+            var result = sut.Wrap(this.puzzleInput);
             Trace.WriteLine("Result is " + result);
         }
 
         [Test]
-        public void Part2_Examples()
+        public void Part2Examples()
         {
-            Assert.AreEqual(34, sut.ribbon(new[] { new[] { 2, 3, 4 } }));
-            Assert.AreEqual(14, sut.ribbon(new[] { new[] { 1, 1, 10 } }));
+            Assert.AreEqual(34, sut.Ribbon(new[] { new[] { 2, 3, 4 } }));
+            Assert.AreEqual(14, sut.Ribbon(new[] { new[] { 1, 1, 10 } }));
         }
 
         [Test]
-        public void Part2_Result()
+        public void Part2Result()
         {
-            var result = sut.ribbon(this.puzzleInput);
+            var result = sut.Ribbon(this.puzzleInput);
             Trace.WriteLine("Result is " + result);
         }
     }
