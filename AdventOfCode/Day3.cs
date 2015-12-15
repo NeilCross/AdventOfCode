@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventOfCode2015
+namespace AdventOfCode
 {
-    class Day3
+    public class Day3
     {
         //void Main()
         //{
@@ -12,7 +12,7 @@ namespace AdventOfCode2015
         //    robotHelper(input).Dump();
         //}
 
-        int findDupes(string input)
+        public int findDupes(string input)
         {
             int x = 0, y = 0;
             var allocated = new Dictionary<string, int>();
@@ -51,7 +51,7 @@ namespace AdventOfCode2015
             return allocated.Count(a => a.Value > 0);
         }
 
-        int robotHelper(string input)
+        public int robotHelper(string input)
         {
             int rx = 0, ry = 0;
             int sx = 0, sy = 0;

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AdventOfCode2015
+namespace AdventOfCode
 {
     public class Day10
     {
